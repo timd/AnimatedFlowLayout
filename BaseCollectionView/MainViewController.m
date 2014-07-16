@@ -12,7 +12,7 @@
 
 @interface MainViewController ()
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
-@property (nonatomic, strong) NSArray *dataArray;
+@property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) CollectionViewFlowLayout *flowLayout;
 @end
 
@@ -40,7 +40,7 @@
 
 - (void)setupData {
     NSMutableArray *tempArray = [[NSMutableArray alloc] initWithCapacity:50];
-    for (int count = 0; count < 50; count++) {
+    for (int count = 0; count < 25; count++) {
         [tempArray addObject:[NSString stringWithFormat:@"Item %d", count]];
     }
     
@@ -75,5 +75,40 @@
     
     return cell;
 }
+
+#pragma mark -
+#pragma mark Interaction methods
+
+-(IBAction)didTapAddItemButton:(id)sender {
+
+    // Create new item and add it to the data model
+    NSInteger lastItemIndex = [self.dataArray count];
+    NSString *itemString = [NSString stringWithFormat:@"Item %d", lastItemIndex];
+    [self.dataArray addObject:itemString];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:lastItemIndex inSection:0];
+    [self.collectionView insertItemsAtIndexPaths:@[indexPath]];
+    
+    
+}
+
+-(IBAction)didTapAddRemoveButton:(id)sender {
+    
+    // Prevent attempting to remove an item from an empty array!
+    if ([self.dataArray count] == 0) {
+        return;
+    }
+
+    // Remove the last item from the data model
+    [self.dataArray removeLastObject];
+
+    // Get the index path of the item that will be removed
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.dataArray.count inSection:0];
+
+    // update the table view
+    [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
+    
+}
+
 
 @end
