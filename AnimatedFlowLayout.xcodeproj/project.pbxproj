@@ -29,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		22B9EF811976AACA00E0CC45 /* BaseCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22B9EF811976AACA00E0CC45 /* AnimatedFlowLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimatedFlowLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B9EF851976AACA00E0CC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22B9EF861976AACA00E0CC45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22B9EF881976AACA00E0CC45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		22B9EF8C1976AACA00E0CC45 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		22B9EF8F1976AACA00E0CC45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22B9EF911976AACA00E0CC45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		22B9EF971976AACB00E0CC45 /* BaseCollectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseCollectionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22B9EF971976AACB00E0CC45 /* AnimatedFlowLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimatedFlowLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B9EF9C1976AACB00E0CC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22B9EF9D1976AACB00E0CC45 /* BaseCollectionViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionViewTests.m; sourceTree = "<group>"; };
 		22B9EFA71976ACCC00E0CC45 /* BaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewCell.h; sourceTree = "<group>"; };
@@ -78,8 +78,8 @@
 		22B9EF821976AACA00E0CC45 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				22B9EF811976AACA00E0CC45 /* BaseCollectionView.app */,
-				22B9EF971976AACB00E0CC45 /* BaseCollectionViewTests.xctest */,
+				22B9EF811976AACA00E0CC45 /* AnimatedFlowLayout.app */,
+				22B9EF971976AACB00E0CC45 /* AnimatedFlowLayoutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,9 +164,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		22B9EF801976AACA00E0CC45 /* BaseCollectionView */ = {
+		22B9EF801976AACA00E0CC45 /* AnimatedFlowLayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 22B9EFA11976AACB00E0CC45 /* Build configuration list for PBXNativeTarget "BaseCollectionView" */;
+			buildConfigurationList = 22B9EFA11976AACB00E0CC45 /* Build configuration list for PBXNativeTarget "AnimatedFlowLayout" */;
 			buildPhases = (
 				22B9EF7D1976AACA00E0CC45 /* Sources */,
 				22B9EF7E1976AACA00E0CC45 /* Frameworks */,
@@ -176,14 +176,14 @@
 			);
 			dependencies = (
 			);
-			name = BaseCollectionView;
+			name = AnimatedFlowLayout;
 			productName = BaseCollectionView;
-			productReference = 22B9EF811976AACA00E0CC45 /* BaseCollectionView.app */;
+			productReference = 22B9EF811976AACA00E0CC45 /* AnimatedFlowLayout.app */;
 			productType = "com.apple.product-type.application";
 		};
-		22B9EF961976AACB00E0CC45 /* BaseCollectionViewTests */ = {
+		22B9EF961976AACB00E0CC45 /* AnimatedFlowLayoutTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 22B9EFA41976AACB00E0CC45 /* Build configuration list for PBXNativeTarget "BaseCollectionViewTests" */;
+			buildConfigurationList = 22B9EFA41976AACB00E0CC45 /* Build configuration list for PBXNativeTarget "AnimatedFlowLayoutTests" */;
 			buildPhases = (
 				22B9EF931976AACB00E0CC45 /* Sources */,
 				22B9EF941976AACB00E0CC45 /* Frameworks */,
@@ -194,9 +194,9 @@
 			dependencies = (
 				22B9EF991976AACB00E0CC45 /* PBXTargetDependency */,
 			);
-			name = BaseCollectionViewTests;
+			name = AnimatedFlowLayoutTests;
 			productName = BaseCollectionViewTests;
-			productReference = 22B9EF971976AACB00E0CC45 /* BaseCollectionViewTests.xctest */;
+			productReference = 22B9EF971976AACB00E0CC45 /* AnimatedFlowLayoutTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -217,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 22B9EF7C1976AACA00E0CC45 /* Build configuration list for PBXProject "BaseCollectionView" */;
+			buildConfigurationList = 22B9EF7C1976AACA00E0CC45 /* Build configuration list for PBXProject "AnimatedFlowLayout" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -230,8 +230,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				22B9EF801976AACA00E0CC45 /* BaseCollectionView */,
-				22B9EF961976AACB00E0CC45 /* BaseCollectionViewTests */,
+				22B9EF801976AACA00E0CC45 /* AnimatedFlowLayout */,
+				22B9EF961976AACB00E0CC45 /* AnimatedFlowLayoutTests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,7 +282,7 @@
 /* Begin PBXTargetDependency section */
 		22B9EF991976AACB00E0CC45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 22B9EF801976AACA00E0CC45 /* BaseCollectionView */;
+			target = 22B9EF801976AACA00E0CC45 /* AnimatedFlowLayout */;
 			targetProxy = 22B9EF981976AACB00E0CC45 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -384,7 +384,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BaseCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AnimatedFlowLayout;
 			};
 			name = Debug;
 		};
@@ -395,7 +395,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BaseCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AnimatedFlowLayout;
 			};
 			name = Release;
 		};
@@ -414,7 +414,7 @@
 				INFOPLIST_FILE = BaseCollectionViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AnimatedFlowLayoutTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -430,7 +430,7 @@
 				INFOPLIST_FILE = BaseCollectionViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AnimatedFlowLayoutTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -438,7 +438,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		22B9EF7C1976AACA00E0CC45 /* Build configuration list for PBXProject "BaseCollectionView" */ = {
+		22B9EF7C1976AACA00E0CC45 /* Build configuration list for PBXProject "AnimatedFlowLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22B9EF9F1976AACB00E0CC45 /* Debug */,
@@ -447,21 +447,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		22B9EFA11976AACB00E0CC45 /* Build configuration list for PBXNativeTarget "BaseCollectionView" */ = {
+		22B9EFA11976AACB00E0CC45 /* Build configuration list for PBXNativeTarget "AnimatedFlowLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22B9EFA21976AACB00E0CC45 /* Debug */,
 				22B9EFA31976AACB00E0CC45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		22B9EFA41976AACB00E0CC45 /* Build configuration list for PBXNativeTarget "BaseCollectionViewTests" */ = {
+		22B9EFA41976AACB00E0CC45 /* Build configuration list for PBXNativeTarget "AnimatedFlowLayoutTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22B9EFA51976AACB00E0CC45 /* Debug */,
 				22B9EFA61976AACB00E0CC45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
