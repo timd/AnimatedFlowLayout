@@ -10,6 +10,7 @@
 
 @interface CollectionViewFlowLayout : UICollectionViewFlowLayout
 
+-(id)initWithCellSize:(CGSize)cellSize;
 @property (nonatomic) CGSize cellSize;
 
 @end

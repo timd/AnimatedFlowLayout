@@ -14,6 +14,9 @@
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) CollectionViewFlowLayout *flowLayout;
+@property (nonatomic, strong) UIImageView *blob;
+@property (nonatomic, strong) NSIndexPath *originalIndexPath;
+@property (nonatomic, strong) NSString *movingItem;
 @end
 
 @implementation MainViewController
@@ -27,6 +30,8 @@
     [self setupData];
     
     [self setupCollectionView];
+    
+    [self setupPanHandler];
 
 }
 
@@ -50,11 +55,18 @@
 - (void)setupCollectionView {
     [self.collectionView registerClass:[BaseCollectionViewCell class] forCellWithReuseIdentifier:@"CellIdentifier"];
     
-    self.flowLayout = [[CollectionViewFlowLayout alloc] init];
-    [self.flowLayout setItemSize:CGSizeMake(100.0f, 100.0f)];
+    self.flowLayout = [[CollectionViewFlowLayout alloc] initWithCellSize:CGSizeMake(100.0f, 100.0f)];
     [self.collectionView setCollectionViewLayout:self.flowLayout];
     
     [self.collectionView setContentInset:UIEdgeInsetsMake(10.0f, 10.0f, 10.0f, 10.0f)];
+}
+
+- (void)setupPanHandler {
+    
+    UIPanGestureRecognizer *pgr = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    [pgr setDelaysTouchesBegan:YES];
+    [self.collectionView addGestureRecognizer:pgr];
+    
 }
 
 #pragma mark - UICollectionView methods
@@ -107,6 +119,38 @@
 
     // update the table view
     [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
+    
+}
+
+-(void)handlePan:(UIPanGestureRecognizer *)pgr {
+    
+    CGPoint locationPoint = [pgr locationInView:self.collectionView];
+    
+    if (pgr.state == UIGestureRecognizerStateBegan) {
+
+        self.originalIndexPath = [self.collectionView indexPathForItemAtPoint:locationPoint];
+        BaseCollectionViewCell *cell = (BaseCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:self.originalIndexPath];
+        
+        UIGraphicsBeginImageContext(cell.bounds.size);
+        [cell.layer renderInContext:UIGraphicsGetCurrentContext()];
+        UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        self.blob = [[UIImageView alloc] initWithImage:viewImage];
+        [self.blob setAlpha:0.75f];
+        [self.blob setCenter:locationPoint];
+        [self.collectionView addSubview:self.blob];
+        
+    }
+
+    if (pgr.state == UIGestureRecognizerStateEnded) {
+        [self.blob removeFromSuperview];
+    }
+    
+
+    if (pgr.state == UIGestureRecognizerStateChanged) {
+        [self.blob setCenter:locationPoint];
+    }
     
 }
 
